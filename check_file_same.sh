@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# cmp --silent $1 $2 && echo '### SUCCESS: Files Are Identical! ###' || echo '### WARNING: Files Are Different! ###'
+# cmp --silent $1 $2 && echo 'Files are identical!' || echo 'Files are different!'
 
 if cmp --silent -- $1 $2; then
-  echo "files contents are identical"
+  echo "Files are identical!"
 else
-  echo "files differ"
+  echo "Files are different!"
 fi
